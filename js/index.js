@@ -1,24 +1,46 @@
 // Your code goes here
 
-//h2
-const titles = document.querySelectorAll('h2')
+//h2 
+const header = document.querySelectorAll ('h2');
+header.forEach(h2 => {
+	h2.addEventListener('click', (event) => {
+        event.target.style.color = 'pink';
+        event.target.style.background = "black";
 
-titles.forEach(element => {
+
+	});
+});
+
+//h1
+const title = document.querySelectorAll ('h1');
+title.forEach (element => {
+    element.addEventListener ('mouseenter', () => {
+     element.style.border = '5px dotted pink';
+    })
+});
+//images
+const img= document.querySelectorAll('img');
+img.forEach(element => {
     element.addEventListener('mouseenter', () => {
-        element.style.color = 'pink';
-        element.style.fontSize = '50px';
+        element.style.transform = 'scale(1.2)';
+        element.style.transition= 'all 0.3s';
     })
 });
 
-titles.forEach(element => {
-    element.addEventListener('mouseleave', () => {
-        element.style.color = 'black';
-        element.style.fontSize = '3.6rem';
+//nav
+const nav = document.querySelectorAll ('nav a');
+
+nav.forEach(element => {
+    element.addEventListener('click', () => {
+        element.style.transform = 'scale(1.3)';
+    })
+    element.addEventListener('focus', (event) => {
+        event.target.style.background = 'pink';  
     })
 });
 
 
-//p 
+//p
 const paragraph = document.querySelectorAll('p')
 
 paragraph.forEach(element => {
@@ -42,42 +64,15 @@ button.forEach(element => {
     })
 });
 
-//nav
-const nav = document.querySelectorAll('a')
+//h4
 
-nav.forEach(element => {
-    element.addEventListener('click', () => {
-        element.style.transform = 'scale(1.3)';
-    })
-    element.addEventListener('focus', (event) => {
-        event.target.style.background = 'pink';  
-    })
-});
-
-
-//img 
-const img = document.querySelectorAll('img')
-
-img.forEach(element => {
-    element.addEventListener('mouseenter', () => {
-        element.style.transform = 'scale(1.2)';
-        element.style.transition= 'all 0.3s';
-    })
-});
-
-img.forEach(element => {
-element.addEventListener("mouseleave", () => {
-    element.style.transform ="scale(1)";
-})
-});
-
-
-//h4 
 const h4 = document.querySelectorAll('h4')
 
 h4.forEach(element => {
     element.addEventListener('wheel', (event) => {
-        event.target.style.background = 'gray';
+        event.target.style.background = 'pink';
+        element.style.fontSize = '50px';
         
     })
 });
+
